@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'hanzo_italic';
+    src: url('hanzo_italic.woff2') format('woff2'),
+         url('hanzo_italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hanzo';
+    src: url('hanzo.woff2') format('woff2'),
+         url('hanzo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
