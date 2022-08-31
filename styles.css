@@ -1,15 +1,53 @@
 @font-face {
     font-family: 'hanzo_italic';
-    src: url('hanzo_italic.woff2') format('woff2'),
-         url('hanzo_italic.woff') format('woff');
+    src: url('fonts/hanzo_italic.woff2') format('woff2'),
+         url('fonts/hanzo_italic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'hanzo';
-    src: url('hanzo.woff2') format('woff2'),
-         url('hanzo.woff') format('woff');
+    src: url('fonts/hanzo.woff2') format('woff2'),
+         url('fonts/hanzo.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'hanzo';
+}
+
+body {
+    display: flex;
+    width: auto; height: 100vh;
+}
+
+#title {
+    background-image: url('bg-image.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    width: 30vw;
+    height: 100vh;
+}
+
+#interface {
+    flex: 6;
+}
+
+.spacer {
+    background-color: rgba(0,0,0,.5);
+    width: 0;
+    flex: auto;
+}
+
+.content {
+    background-color: rgba(100,100,100,.5);
+    flex: 6 1 auto;
+    min-width: 700px;
+}
+
