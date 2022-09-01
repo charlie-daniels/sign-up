@@ -24,6 +24,8 @@
     font-family: hanzo, 'Times New Roman', serif;
     font-weight: 300;
     font-size: 22px;
+    list-style: none;
+    appearance: none;
 }
 
 body {
@@ -37,7 +39,6 @@ body > .spacer {
 
 body > .content {
     flex: 10 1 auto;
-    min-width: 700px;
     display: flex;
 }
 
@@ -65,6 +66,7 @@ body > .content {
     padding: 2rem 0;
     margin-top: 20vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -88,23 +90,37 @@ body > .content {
     background-color: #f6f6f6;
 }
 
-#interface > .intro {
+#interface > * {
     flex: 1;
     padding:  1rem;
+}
+
+#interface > .intro {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
 #interface > .user-form {
-    flex: 1.5;
     background-color: #fff;
 }
 
-#interface > .complete {
-    flex: 1;
+form > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-#interface > .intro p {
-    margin: .5rem;
+form > ul > li {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 33.33%;
+}
+
+legend {
+    margin-bottom: .6rem;
+}
+
+label {
+    font-size: .5rem;
 }
