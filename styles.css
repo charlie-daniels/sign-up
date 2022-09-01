@@ -14,6 +14,7 @@
 
 :root {
     --header-font-size: 70px;
+    --highlight-color: #506b7e;
 }
 
 * {
@@ -43,10 +44,10 @@ body > .content {
 }
 
 #sidehead {
+    display: flex;
     background: url('bg-image.png') no-repeat center;
     background-size: cover;
     min-width: 35vw; height: 100vh;
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -75,6 +76,7 @@ body > .content {
     margin: auto 0 .5rem 0;
     background-color: rgba(0,0,0,.4);
     padding: 2px;
+    text-align: center;
 }
 
 #logo {
@@ -92,7 +94,7 @@ body > .content {
 
 #interface > * {
     flex: 1;
-    padding:  1rem;
+    margin: 1rem;
 }
 
 #interface > .intro {
@@ -103,6 +105,12 @@ body > .content {
 
 #interface > .user-form {
     background-color: #fff;
+    margin: 0;
+    padding: 1rem;
+}
+
+#interface > .user-form, button {
+    box-shadow: 0 2px 4px .5px rgba(0,0,0,.2);
 }
 
 form > ul {
@@ -123,4 +131,28 @@ legend {
 
 label {
     font-size: .5rem;
+    letter-spacing: .5px;
 }
+
+input {
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+button {
+    background-color: var(--highlight-color, darkslategrey);
+    color: #fff;
+    padding: .5rem;
+    border: none;
+    border-radius: 6px;
+}
+
+.complete div {
+    margin: 1rem 0;
+}
+
+.complete a {
+    text-decoration: none;
+    color: var(--highlight-color, darkslategrey)
+}
+
