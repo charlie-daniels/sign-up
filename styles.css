@@ -19,6 +19,7 @@
 
 * {
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: #000;
@@ -137,6 +138,9 @@ label {
 input {
     border: 1px solid black;
     border-radius: 6px;
+    font-size: .8rem;
+    padding: .2rem;
+    outline: none;
 }
 
 button {
@@ -156,3 +160,16 @@ button {
     color: var(--highlight-color, darkslategrey)
 }
 
+input:hover,
+button:hover {
+    background-color: #0000000c;
+}
+
+input:focus {
+    border: 1px solid var(--highlight-color, darkslategrey);
+    box-shadow: 0 2px 4px .5px rgba(0,0,0,.2);
+}
+
+input:not(:placeholder-shown):invalid {
+    border: 2px solid #cd4336;
+}
