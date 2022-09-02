@@ -7,7 +7,7 @@ function checkPasswords(a, b) {
     } else {
         a.setCustomValidity('');
         b.setCustomValidity('');
-        firstContainer.classList.add('password-invalid');
+        firstContainer.classList.remove('password-invalid');
     }
 }
 
