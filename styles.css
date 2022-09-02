@@ -14,6 +14,7 @@
 
 :root {
     --header-font-size: 70px;
+    --input-padding: .2rem;
     --highlight-color: #506b7e;
 }
 
@@ -118,6 +119,7 @@ form > ul {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    position: relative;
 }
 
 form > ul > li {
@@ -139,7 +141,7 @@ input {
     border: 1px solid black;
     border-radius: 6px;
     font-size: .8rem;
-    padding: .2rem;
+    padding: var(--input-padding);
     outline: none;
 }
 
@@ -160,9 +162,8 @@ button {
     color: var(--highlight-color, darkslategrey)
 }
 
-input:hover,
-button:hover {
-    background-color: #0000000c;
+input:hover {
+    box-shadow: 0 2px 4px .5px rgba(0,0,0,.2);
 }
 
 input:focus {
@@ -170,6 +171,16 @@ input:focus {
     box-shadow: 0 2px 4px .5px rgba(0,0,0,.2);
 }
 
-input:not(:placeholder-shown):invalid {
+input:not(:placeholder-shown):invalid,
+input[type="password"]:not(:placeholder-shown):invalid {
     border: 2px solid #cd4336;
+    padding: calc(var(--input-padding) - 1px);
+}
+
+.password-invalid::after {
+    position: absolute;
+    bottom: -1.3em;
+    content: "* Passwords do not match";
+    color: red;
+    font-size: .5rem;
 }
